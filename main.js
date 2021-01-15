@@ -52,9 +52,20 @@ function numbers() {
 }
 
 function actions() {
-  document.querySelector('.controls .eraseAll').addEventListener('click', () => {
+  document.querySelector('.eraseAll').addEventListener('click', () => {
     let input = document.getElementById('value')
     input.value = ""
+  })
+
+  document.querySelector('.erase').addEventListener('click', () => {
+    let input = document.getElementById('value')
+    input.value = input.value.slice(0, -1)
+  })
+
+  document.querySelector('.elevate').addEventListener('click', () => {
+    let input = document.getElementById('value')
+    result = input.value**2
+    input.value = result
   })
 }
 
@@ -91,9 +102,6 @@ function operators() {
   })
 }
 
-function calc() {
-
-}
 
 numbers()
 actions()
