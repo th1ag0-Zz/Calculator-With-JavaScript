@@ -32,8 +32,6 @@ body {
 
 #app {
   height: 100vh;
-  max-height: 640px;
-  width: 100vw;
   max-width: 360px;
   background: #ccc;
   display: flex;
@@ -101,7 +99,13 @@ body {
   color: var(--color-primary);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 720px) {
+  #app {
+    max-width: none;
+    height: 100vh;
+    width: 100vw;
+  }
+
   #app .controls .btn {
     cursor: none;
   }
