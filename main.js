@@ -59,6 +59,12 @@ function actions() {
 }
 
 function operators() {
+  document.querySelector('.controls .operator-equal').addEventListener('click', () => {
+    let input = document.getElementById('value')
+    let result = eval(input.value)
+    input.value = result
+  })
+
   document.querySelector('.controls .div').addEventListener('click', () => {
     let input = document.getElementById('value')
     input.value += "/"
@@ -77,6 +83,11 @@ function operators() {
   document.querySelector('.controls .plus').addEventListener('click', () => {
     let input = document.getElementById('value')
     input.value += "+"
+  })
+
+  document.querySelector('.controls .dot').addEventListener('click', () => {
+    let input = document.getElementById('value')
+    input.value += "."
   })
 }
 
